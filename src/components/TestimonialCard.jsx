@@ -6,10 +6,10 @@ const TestimonialCard = ({ imgUrl, customerName, feedback }) => {
       <img
         src={imgUrl}
         alt="customer"
-        className="rounded-full object-cover w-[150px] h-[150px]"
+        className="rounded-full object-cover w-[100px] h-[100px]"
       />
       <h2 className="font-bold text-2xl">{customerName}</h2>
-      <p className="mt-4 font-medium text-base text-center">{feedback}</p>
+      <p className="mt-4 w-64 font-medium text-base text-center">{feedback}</p>
     </div>
   );
 };

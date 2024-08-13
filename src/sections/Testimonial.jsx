@@ -53,8 +53,8 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="px-20 py-10">
-      <div className="font-extrabold text-6xl text-center p-10">What Our <span className="text-orange-600"> Students </span> Say?</div>
+    <section className="px-20 py-10 max-sm:p-2">
+      <div className="font-extrabold text-6xl text-center p-10 max-sm:text-4xl">What Our <span className="text-orange-600"> Students </span> Say?</div>
       <div className="text-center text-xl pb-10">Hear success stories from our Students about their exceptional experiences with us.</div>
       <div className="w-full">
         <Carousel className=" rounded-3xl"  responsive={responsive} infinite={true}>

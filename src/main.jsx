@@ -6,6 +6,8 @@ import Home from './pages/Home'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Home />  {/* for testing */}
+    <Home />
   </StrictMode>,
 )
+
+// Frequently add question in Home page
