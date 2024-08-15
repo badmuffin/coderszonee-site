@@ -2,7 +2,7 @@ import React from "react";
 
 const CourseCard = ({ courseBanner, courseTitle, author, rating, price }) => {
   return (
-    <div className=" shadow-lg hover:shadow-2xl bg-white w-[30%] max-sm:w-full">
+    <div className=" shadow-lg hover:shadow-2xl bg-white w-[30%] lg:w-[30%] md:w-[45%] sm:w-[45%]">
       <div className=" h-full w-full">
         <img className=" object-cover " src={courseBanner} />
       </div>

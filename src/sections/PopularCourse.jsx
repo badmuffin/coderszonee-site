@@ -6,11 +6,12 @@ import Button from "../components/Button";
 const PopularCourse = () => {
   return (
     <section className=" px-20 pt-6 pb-10 max-sm:p-2">
-      <h1 className="font-extrabold text-6xl text-center p-20 max-sm:text-4xl max-sm:p-2">
+      <h1 className="font-extrabold text-6xl text-center p-20 
+      max-sm:text-3xl max-sm:p-2 max-md:text-6xl">
         Popular <span className="text-orange-600"> Courses </span>
       </h1>
-      <div className="flex justify-center items-center flex-wrap gap-10 w-full max-sm:flex-col">
-        {courseCardDetail.map((detail, key) => (
+      <div className="flex justify-center items-center flex-wrap gap-10 w-full max-sm:flex-col max-md:w-full max-md:flex-col">
+        {courseCardDetail.map((detail) => (
           <CourseCard
             id={detail.id}
             key={detail.key}

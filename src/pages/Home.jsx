@@ -5,10 +5,11 @@ import Testimonial from "../sections/Testimonial";
 import PopularCourse from "../sections/PopularCourse";
 import MostDemand from "../sections/MostDemand";
 import AboutUs from "../sections/AboutUs";
+import Footer from "../sections/Footer";
 
 const Home = () => {
   return (
-    <main className="relative p-10 max-lg:p-2">
+    <main className="">
       <Navbar />
       <section className="p-10">
         <Hero />
@@ -24,6 +25,9 @@ const Home = () => {
       </section>
       <section className="p-10">
         <Testimonial />
+      </section>
+      <section className="">
+        <Footer />
       </section>
     </main>
   );
