@@ -43,7 +43,7 @@ const AboutUs = () => {
           <div
             key={stat.id}
             className="flex justify-center items-center bg-white
-            flex-col rounded-2xl mt-20 mx-10 lg:px-8 lg:py-4
+            flex-col rounded-2xl mt-10 m-2 px-6 py-2 lg:px-8 lg:py-4
             "
           >
             <h1 className="font-extrabold text-4xl text-orange-600 max-sm:text-3xl">

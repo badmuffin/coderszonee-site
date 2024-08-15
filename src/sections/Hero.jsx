@@ -24,12 +24,14 @@ const Hero = () => {
           <Button
             label="Start Learning"
             bgColor="bg-orange-600"
+            hoverBgColor="bg-orange-700"
             border="border-orange-700"
             textColor="text-white"
           />
           <Button
             label="Learn More"
             bgColor="bg-white"
+            hoverBgColor="bg-gray-200"
             border="border-orange-600"
             textColor="text-orange-600"
           />

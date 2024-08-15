@@ -10,7 +10,7 @@ const PopularCourse = () => {
       max-sm:text-3xl max-sm:p-2 max-md:text-6xl">
         Popular <span className="text-orange-600"> Courses </span>
       </h1>
-      <div className="flex justify-center items-center flex-wrap gap-10 w-full max-sm:flex-col max-md:w-full max-md:flex-col">
+      <div className="flex justify-center items-center flex-wrap gap-10 max-lg:flex-col ">
         {courseCardDetail.map((detail) => (
           <CourseCard
             id={detail.id}

@@ -6,6 +6,8 @@ import PopularCourse from "../sections/PopularCourse";
 import MostDemand from "../sections/MostDemand";
 import AboutUs from "../sections/AboutUs";
 import Footer from "../sections/Footer";
+import ContactUs from "../sections/ContactUs";
+import Newsletter from "../sections/Newsletter";
 
 const Home = () => {
   return (
@@ -25,6 +27,12 @@ const Home = () => {
       </section>
       <section className="p-10">
         <Testimonial />
+      </section>
+      <section>
+        <Newsletter />
+      </section>
+      <section>
+        <ContactUs />
       </section>
       <section className="">
         <Footer />
