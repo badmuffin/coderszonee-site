@@ -11,7 +11,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="bg-orange-200 text-black py-12">
+    <section className="bg-orange-100 text-black py-12">
       <div className="max-w-[80rem] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:justify-between">
         {/* Content on the left */}
         <div className="mb-8 lg:mb-0">

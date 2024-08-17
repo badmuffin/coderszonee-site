@@ -36,7 +36,7 @@ const ContactUs = () => {
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-lg shadow-lg space-y-6"
+          className="bg-white p-8 rounded-lg shadow-xl space-y-6"
         >
           {/* Name */}
           <div className="flex flex-col">

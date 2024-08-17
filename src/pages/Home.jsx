@@ -8,6 +8,7 @@ import AboutUs from "../sections/AboutUs";
 import Footer from "../sections/Footer";
 import ContactUs from "../sections/ContactUs";
 import Newsletter from "../sections/Newsletter";
+import SignForm from "../sections/SignForm";
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
       <section className="">
         <Footer />
       </section>
+      <SignForm />
     </main>
   );
 };
