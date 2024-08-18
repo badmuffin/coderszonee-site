@@ -1,105 +1,56 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-    // Clear the form
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
-
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-semibold text-center text-gray-800 mb-6">
-          Contact Us
-        </h2>
-        <p className="text-center text-gray-700 mb-12">
-          We'd love to hear from you! Fill out the form below and we'll get back
-          to you shortly.
-        </p>
-
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-lg shadow-xl space-y-6"
-        >
-          {/* Name */}
-          <div className="flex flex-col">
-            <label htmlFor="name" className="text-gray-700 font-semibold">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              className="mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
-              required
-            />
-          </div>
-
-          {/* Email */}
-          <div className="flex flex-col">
-            <label htmlFor="email" className="text-gray-700 font-semibold">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className="mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
-              required
-            />
-          </div>
-
-          {/* Message */}
-          <div className="flex flex-col">
-            <label htmlFor="message" className="text-gray-700 font-semibold">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              rows="5"
-              placeholder="Write your message..."
-              className="mt-2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500"
-              required
-            />
-          </div>
-
-          {/* Submit Button */}
-          <div className="text-center">
-            <button
-              type="submit"
-              className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg focus:outline-none transition-colors duration-200"
-            >
-              Send Message
+    <section className="relative py-28 bg-gray-900">
+      <div className="relative z-10 max-w-screen-xl mx-auto text-gray-600 sm:px-4 md:px-8">
+        <div className="max-w-lg space-y-3 px-4 sm:mx-auto sm:text-center sm:px-0">
+          <h3 className="text-cyan-400 font-semibold">Contact</h3>
+          <p className="text-white text-3xl font-semibold sm:text-4xl">
+            Get in touch
+          </p>
+          <p className="text-gray-300">
+            We’d love to hear from you! Please fill out the form bellow.
+          </p>
+        </div>
+        <div className="mt-12 mx-auto px-4 p-8 bg-white sm:max-w-lg sm:px-8 sm:rounded-xl">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+            <div>
+              <label className="font-medium">Full name</label>
+              <input
+                type="text"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+              />
+            </div>
+            <div>
+              <label className="font-medium">Email</label>
+              <input
+                type="email"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+              />
+            </div>
+            <div>
+              <label className="font-medium">Message</label>
+              <textarea
+                required
+                className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-gray-800 shadow-sm rounded-lg"
+              ></textarea>
+            </div>
+            <button className="w-full px-4 py-2 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150">
+              Submit
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+      <div
+        className="absolute inset-0 blur-[118px] max-w-lg h-[800px] mx-auto sm:max-w-3xl sm:h-[400px]"
+        style={{
+          background:
+            "linear-gradient(106.89deg, rgba(192, 132, 252, 0.11) 15.73%, rgba(14, 165, 233, 0.41) 15.74%, rgba(232, 121, 249, 0.26) 56.49%, rgba(79, 70, 229, 0.4) 115.91%)",
+        }}
+      ></div>
     </section>
   );
 };

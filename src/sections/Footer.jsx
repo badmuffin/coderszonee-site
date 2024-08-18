@@ -57,13 +57,13 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-facebook-f"></i> Facebook
+                <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-twitter"></i> Twitter
+                <i className="fab fa-twitter"></i> 
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-linkedin-in"></i> LinkedIn
+                <i className="fab fa-linkedin-in"></i> 
               </a>
             </div>
           </div>

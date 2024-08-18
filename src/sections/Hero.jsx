@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="w-full flex justify-center items-center min-h-screen rounded-3xl bg-orange-100 max-lg:flex-col-reverse"
+      className="w-full flex justify-center items-center min-h-screen rounded-3xl max-lg:flex-col-reverse"
     >
       {/* left side content */}
       <div className="relative text-start xl:w-2/5 flex flex-col p-4 justify-center items-start w-full mx-10 max-sm:p-2 max-lg:text-center">

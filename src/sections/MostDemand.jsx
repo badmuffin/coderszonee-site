@@ -32,6 +32,7 @@ const MostDemand = () => {
     { id: 6, Course: "Data Structures & Algorithm" },
     { id: 7, Course: "Java Core & Springboot" },
   ];
+  
   return (
     <section className=" px-20 py-2 ">
       <div>

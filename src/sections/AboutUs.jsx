@@ -10,7 +10,7 @@ const AboutUs = () => {
   ];
 
   return (
-    <section className="w-full flex flex-col py-20 px-10 bg-orange-100 rounded-3xl max-sm:p-0">
+    <section className="w-full flex flex-col py-20 px-10 bg-gray-100 rounded-3xl max-sm:p-0">
       {/* Upper content */}
       <div className="flex justify-center items-center max-lg:flex-col">
         {/* Image */}

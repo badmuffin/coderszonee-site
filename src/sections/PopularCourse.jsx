@@ -1,6 +1,6 @@
 import React from "react";
 import { courseCardDetail } from "../constants/courseCardDetail";
-import CourseCard from "../components/CourseCard";
+import CourseCard from '../components/CourseCard'
 import Button from "../components/Button";
 
 const PopularCourse = () => {
@@ -18,8 +18,6 @@ const PopularCourse = () => {
             courseBanner={detail.courseBanner}
             courseTitle={detail.courseTitle}
             author={detail.author}
-            rating={detail.rating}
-            price={detail.price}
           />
         ))}
       </div>
