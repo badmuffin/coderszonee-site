@@ -1,54 +1,48 @@
-import React from "react";
-import Button from "../components/Button";
-import hero from "../assets/hero.jpg";
+import hero from "../assets/heroo.svg";
 
-const Hero = () => {
+export default () => {
   return (
-    <section
-      id="home"
-      className="w-full flex justify-center items-center min-h-screen rounded-3xl max-lg:flex-col-reverse"
-    >
-      {/* left side content */}
-      <div className="relative text-start xl:w-2/5 flex flex-col p-4 justify-center items-start w-full mx-10 max-sm:p-2 max-lg:text-center">
-        <h1 className=" font-extrabold leading-snug text-6xl mb-10 max-sm:text-3xl max-lg:text-center">
-          Master
-          <span className=" text-orange-600"> Digital Skills </span>
-          With Ease!
-        </h1>
-        <p className="text-xl mb-10 max-sm:text-lg max-lg:text-2xl">
-          Empower your learning journey with expert-led courses and personalized
-          content.Empower your learning journey with expert-led courses and personalized
-          content.
-        </p>
-        <div className="mt-10 px-4 flex gap-4 ">
-          <Button
-            label="Start Learning"
-            bgColor="bg-orange-600"
-            hoverBgColor="bg-orange-700"
-            border="border-orange-700"
-            textColor="text-white"
-          />
-          <Button
-            label="Learn More"
-            bgColor="bg-white"
-            hoverBgColor="bg-gray-200"
-            border="border-orange-600"
-            textColor="text-orange-600"
-          />
-        </div>
+    <div className="relative">
+      {/* gradient background */}
+      <div
+        className="absolute inset-0 blur-xl h-[580px]"
+        style={{
+          background:
+            "linear-gradient(143.6deg, rgba(192, 132, 252, 0) 20.79%, rgba(232, 121, 249, 0.26) 40.92%, rgba(204, 171, 238, 0) 70.35%)",
+        }}
+      ></div>
+      <div className="relative">
+        <section>
+          <div className="max-w-screen-xl mx-auto px-4 py-28 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
+            <div className="flex-none space-y-5 max-w-xl">
+              <h1 className="text-4xl text-gray-800 font-bold sm:text-6xl">
+                Master <span className="text-orange-600"> Digital Skills </span>{" "}
+                With Ease!
+              </h1>
+              <p>
+                Empower your learning journey with expert-led and personalized
+                content. Lorem ipsum dolor sit amet.
+              </p>
+              {/* buttons */}
+              <div className="flex items-center gap-x-3 sm:text-sm max-md:flex-col">
+              <button
+                  className="text-white bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-bold rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2"
+                >
+                  Get Started
+                </button>
+                <button
+                  className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+            <div className="flex-1 hidden lg:block">
+              <img src={hero} className="max-w-xl" />
+            </div>
+          </div>
+        </section>
       </div>
-      {/* Hero image */}
-      <div className=" pr-10 items-end max-lg:p-0">
-        <img
-          src={hero}
-          alt="hero-image"
-          width={700}
-          height={700}
-          className="object-cover rounded-3xl relative z-10"
-        />
-      </div>
-    </section>
+    </div>
   );
 };
-
-export default Hero;

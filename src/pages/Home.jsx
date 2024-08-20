@@ -10,11 +10,11 @@ import Newsletter from "../sections/Newsletter";
 import WhyUs from "../sections/WhyUs";
 import Faqs from "../sections/Faqs";
 import Hero from "../sections/Hero";
-import SignForm from "../sections/SignForm"
+import SignForm from "../sections/SignForm";
 
 const Home = () => {
   return (
-    <main className="">
+    <main className="scroll-smooth ">
       <Navbar />
       <Hero />
       <WhyUs />
