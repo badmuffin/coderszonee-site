@@ -1,16 +1,18 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+// import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
 
   // Point to beremember Replace javascript:void(0) paths with the paths
   const navigation = [
-    { title: "Home", path: "javascript:void(0)" },
-    { title: "About", path: "javascript:void(0)" },
-    { title: "Courses", path: "javascript:void(0)" },
-    { title: "Resources", path: "javascript:void(0)" },
-    { title: "Contact", path: "javascript:void(0)" },
+    { title: "Home", path: "/" },
+    { title: "About", path: "/about" },
+    { title: "Courses", path: "/courses" },
+    { title: "Resources", path: "/resources" },
+    { title: "Contact", path: "/contact" },
   ];
 
   useEffect(() => {
@@ -22,9 +24,9 @@ const Navbar = () => {
 
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
-      <a href="javascript:void(0)">
-        <img src={logo} width={150} height={80} alt="logo" />
-      </a>
+      <Link to="/">
+        <img className=" object-cover" src={logo} width={150} height={80} alt="logo" />
+      </Link>
       {/* Burger icon for smaller aspects */}
       <div className="md:hidden">
         <button
@@ -87,21 +89,21 @@ const Navbar = () => {
             <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="text-gray-700 hover:text-gray-900">
-                    <a href={item.path} className="block">
+                  <li key={idx} className="text-gray-700 font-extrabold text-lg hover:text-black">
+                    <Link to={item.path} className="block">
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
             </ul>
             <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
-              <button
+              <Link
+                to="/sign"
                 className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"
-                type="button"
               >
                 Sign in
-              </button>
+              </Link>
             </div>
           </div>
         </div>

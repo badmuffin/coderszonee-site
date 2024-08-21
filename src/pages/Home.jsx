@@ -15,17 +15,11 @@ import SignForm from "../sections/SignForm";
 const Home = () => {
   return (
     <main className="scroll-smooth ">
-      <Navbar />
       <Hero />
       <WhyUs />
       <PopularCourse />
-      <AboutUs />
       <Testimonial />
       <Newsletter />
-      <SignForm />
-      <ContactUs />
-      <Faqs />
-      <Footer />
     </main>
   );
 };

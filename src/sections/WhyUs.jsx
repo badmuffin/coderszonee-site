@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyUs = () => {
   return (
-    <div className="w-screen bg-white sm:px-4 xl:px-12">
+    <div className="w-screen bg-white sm:px-4 xl:px-10">
       <div className="z-10 mx-auto w-full px-6 py-12 sm:px-8 sm:py-16 lg:px-10 xl:px-16">
         <div className="mb-12">
           <div className="lg:flex-no-wrap -mx-3 flex flex-row flex-wrap items-end">
