@@ -12,15 +12,30 @@ import Layout from "./Layout";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Sign from "./pages/Sign";
+import NotFound from "./sections/NotFound";
+import Navbar from "./sections/Navbar";
+import Footer from "./sections/Footer";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
-      <Route path="" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/sign" element={<Sign />} />
-    </Route>
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route path="" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/sign" element={<Sign />} />
+      </Route>
+      <Route
+        path="/*"
+        element={
+          <>
+            <Navbar /> 
+            <NotFound />
+            <Footer />
+          </>
+        }
+      />
+    </>
   )
 );
 

@@ -20,7 +20,7 @@ const AboutUs = () => {
             alt="image"
             width={700}
             height={700}
-            className="object-cover rounded-2xl relative z-10"
+            className="object-cover rounded-2xl relative z-0"
           />
         </div>
         {/* Content */}

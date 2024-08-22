@@ -24,7 +24,7 @@ export default () => {
                 content. Lorem ipsum dolor sit amet.
               </p>
               {/* buttons */}
-              <div className="flex items-center gap-x-3 sm:text-sm max-md:flex-col">
+              <div className="flex items-center gap-x-3 sm:text-sm max-sm:flex-col">
               <button
                   className="text-white bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:bg-gradient-to-br shadow-lg shadow-orange-500/50 dark:shadow-lg dark:shadow-orange-800/80 font-bold rounded-lg text-sm px-10 py-4 text-center mr-2 mb-2"
                 >

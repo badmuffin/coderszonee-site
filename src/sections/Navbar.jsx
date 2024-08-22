@@ -1,19 +1,11 @@
 import { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { navigation } from "../constants/courseCardDetail";
 // import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
-
-  // Point to beremember Replace javascript:void(0) paths with the paths
-  const navigation = [
-    { title: "Home", path: "/" },
-    { title: "About", path: "/about" },
-    { title: "Courses", path: "/courses" },
-    { title: "Resources", path: "/resources" },
-    { title: "Contact", path: "/contact" },
-  ];
 
   useEffect(() => {
     document.onclick = (e) => {
@@ -69,6 +61,7 @@ const Navbar = () => {
 
   return (
     <header className="z-10">
+      {/* another navbar which opens only when the burger icon get clicked */}
       <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
         <Brand />
       </div>
@@ -90,20 +83,20 @@ const Navbar = () => {
               {navigation.map((item, idx) => {
                 return (
                   <li key={idx} className="text-gray-700 font-extrabold text-lg hover:text-black">
-                    <Link to={item.path} className="block">
+                    <NavLink to={item.path} className={({isActive}) => `block ${isActive ? 'text-orange-700' : ''}`}>
                       {item.title}
-                    </Link>
+                    </NavLink>
                   </li>
                 );
               })}
             </ul>
             <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
-              <Link
+              <NavLink
                 to="/sign"
                 className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"
               >
                 Sign in
-              </Link>
+              </NavLink>
             </div>
           </div>
         </div>

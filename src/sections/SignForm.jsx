@@ -1,7 +1,6 @@
-// import { useState } from "react";
+
 
 // const SignForm = () => {
-//   const [isSignInForm, setIsSignInForm] = useState(true);
 //   const [errMsg, setErrMsg] = useState(null);
 
 //   // creating references from input tags
@@ -33,15 +32,11 @@
 //     setErrMsg(msg);
 //   };
 
-//   const toggleForm = () => {
-//     setIsSignInForm(!isSignInForm);
-//   };
 
 //   return (
 //     <div>
 //       <form
 //         onSubmit={(e) => e.preventDefault()}
-//         className=" flex flex-col justify-center items-center text-black my-36 mx-auto w-1/3 p-10 border-2 border-black rounded-xl"
 //       >
 //         <h1 className="font-bold text-4xl py-4 px-2">
 //           {isSignInForm ? " Sign In " : " Sign Up "}
@@ -87,15 +82,22 @@
 
 // export default SignForm;
 
-import React from "react";
+import React, { useState } from "react";
 import ed from "../assets/ed.png";
 
 const SignForm = () => {
+
+  const [isSignInForm, setIsSignInForm] = useState(true);
+
+  const toggleForm = () => {
+    setIsSignInForm(!isSignInForm);
+  }
+
   return (
     <div className="flex flex-wrap">
-      <div className="flex w-full flex-col md:w-1/2">
+      <div className="flex w-full flex-col md:w-1/2 bg-blue-100">
         <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
-          <p className="text-left text-3xl font-bold">Welcome back</p>
+          <p className="text-left text-5xl font-bold"> {isSignInForm ? "Welcome back!" : "Hi there!"}</p>
           <p className="mt-2 text-left text-gray-500">
             please enter your details.
           </p>
@@ -105,19 +107,31 @@ const SignForm = () => {
               src="https://static.cdnlogo.com/logos/g/35/google-icon.svg"
               alt="Google Icon"
             />
-            Log in with Google
+            { isSignInForm ? "Log in with Google" : "Sign up with Google" }
           </button>
           <div className="relative mt-8 flex h-px place-items-center bg-gray-200">
-            <div className="absolute left-1/2 h-6 w-14 -translate-x-1/2 bg-white text-center text-sm text-gray-500">
+            <div className="absolute left-1/2 h-6 w-14 -translate-x-1/2 text-center text-xl text-gray-500">
               or
             </div>
           </div>
           <form className="flex flex-col pt-3 md:pt-8">
+
+          <div className="flex flex-col pt-4">
+              <div className={`${isSignInForm ? "hidden" : ""} focus-within:border-b-gray-500 relative flex overflow-hidden border-b-2 transition`}>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
+                  placeholder="Full Name"
+                />
+              </div>
+            </div>
+
             <div className="flex flex-col pt-4">
               <div className="focus-within:border-b-gray-500 relative flex overflow-hidden border-b-2 transition">
                 <input
                   type="email"
-                  id="login-email"
+                  id="email"
                   className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   placeholder="Email"
                 />
@@ -127,21 +141,21 @@ const SignForm = () => {
               <div className="focus-within:border-b-gray-500 relative flex overflow-hidden border-b-2 transition">
                 <input
                   type="password"
-                  id="login-password"
+                  id="password"
                   className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   placeholder="Password"
                 />
               </div>
             </div>
             <button onClick={e => e.preventDefault()} className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2">
-              Sign in
+              { isSignInForm ? "Sign in" : "Sign up"}
             </button>
           </form>
           <div className="py-12 text-center">
-            <p className="whitespace-nowrap text-gray-600">
-              Don't have an account?
+            <p className="whitespace-nowrap text-gray-600" onClick={toggleForm} >
+              {isSignInForm ? "Don't" : "Already" } have an account?
               <span className="cursor-pointer underline-offset-4 font-semibold text-gray-900 underline">
-                Sign up for free.
+                { isSignInForm ? "Sign up for free" : "Click here for login"}.
               </span>
             </p>
           </div>

@@ -53,3 +53,12 @@ export const reviews = [
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nulla sed quidem optio expedita deleniti itaque?",
   },
 ];
+
+// navbar
+export const navigation = [
+  { title: "Home", path: "/" },
+  { title: "About", path: "/about" },
+  { title: "Courses", path: "/courses" },
+  { title: "Resources", path: "/resources" },
+  { title: "Contact", path: "/contact" },
+];
