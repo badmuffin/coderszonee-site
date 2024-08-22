@@ -1,13 +1,8 @@
 import React from "react";
 import image from "../assets/course2.png";
+import { stats } from "../constants/courseCardDetail";
 
 const AboutUs = () => {
-  const stats = [
-    { id: "A", title: "15+", subtitle: "Instructors" },
-    { id: "B", title: "5k+", subtitle: "Students" },
-    { id: "C", title: "98%", subtitle: "Loremeum" },
-    { id: "D", title: "20%", subtitle: "Sitfolar" },
-  ];
 
   return (
     <section className="w-full flex flex-col py-20 px-10 bg-gray-100 rounded-3xl max-sm:p-0">

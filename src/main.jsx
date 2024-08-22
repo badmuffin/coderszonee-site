@@ -25,16 +25,7 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign" element={<Sign />} />
       </Route>
-      <Route
-        path="/*"
-        element={
-          <>
-            <Navbar /> 
-            <NotFound />
-            <Footer />
-          </>
-        }
-      />
+      <Route path="/*" element={<NotFound />} />
     </>
   )
 );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
@@ -9,7 +10,7 @@ const NotFound = () => {
         Sorry, the page you are looking for doesn't exist.
       </p>
       <p className="mt-2 text-xl">
-        Go Back to Home Page
+        Go Back to <Link to='/' className="underline text-gray-900 ">Home Page</Link>
       </p>
     </div>
   );

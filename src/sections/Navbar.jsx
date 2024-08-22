@@ -17,7 +17,13 @@ const Navbar = () => {
   const Brand = () => (
     <div className="flex items-center justify-between py-5 md:block">
       <Link to="/">
-        <img className=" object-cover" src={logo} width={150} height={80} alt="logo" />
+        <img
+          className=" object-cover"
+          src={logo}
+          width={150}
+          height={80}
+          alt="logo"
+        />
       </Link>
       {/* Burger icon for smaller aspects */}
       <div className="md:hidden">
@@ -60,9 +66,9 @@ const Navbar = () => {
   );
 
   return (
-    <header className="z-10">
+    <header className="z-50">
       {/* another navbar which opens only when the burger icon get clicked */}
-      <div className={`md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
+      <div className={` z-50 md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
         <Brand />
       </div>
       <nav
@@ -82,8 +88,16 @@ const Navbar = () => {
             <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
-                  <li key={idx} className="text-gray-700 font-extrabold text-lg hover:text-black">
-                    <NavLink to={item.path} className={({isActive}) => `block ${isActive ? 'text-orange-700' : ''}`}>
+                  <li
+                    key={idx}
+                    className="text-gray-700 font-extrabold text-lg hover:text-black"
+                  >
+                    <NavLink
+                      to={item.path}
+                      className={({ isActive }) =>
+                        `block ${isActive ? "text-orange-700" : ""}`
+                      }
+                    >
                       {item.title}
                     </NavLink>
                   </li>
