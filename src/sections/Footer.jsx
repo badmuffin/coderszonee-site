@@ -21,8 +21,8 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul>
-              {navigation.map((nav) => (
-                <li className="mb-2">
+              {navigation.map((nav, idx) => (
+                <li key={idx} className="mb-2">
                   <Link to={nav.path} className="text-gray-400 hover:text-white">
                     {nav.title}
                   </Link>

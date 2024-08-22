@@ -1,5 +1,6 @@
 import React from "react";
-import { TestimonialCard, responsive } from "../components/TestimonialCard";
+import { TestimonialCard } from "../components/TestimonialCard";
+import { responsive } from "../constants/courseCardDetail";
 import { reviews }  from "../constants/courseCardDetail";
 
 import Carousel from "react-multi-carousel";

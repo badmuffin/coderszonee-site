@@ -1,6 +1,6 @@
 import React from "react";
 
-const TestimonialCard = ({ imgUrl, customerName, feedback }) => {
+export const TestimonialCard = ({ imgUrl, customerName, feedback }) => {
   return (
     <div
       className="flex justify-center items-center flex-col w-full bg-white p-10"
@@ -16,4 +16,4 @@ const TestimonialCard = ({ imgUrl, customerName, feedback }) => {
   );
 };
 
-export default TestimonialCard;
+// export default TestimonialCard;
