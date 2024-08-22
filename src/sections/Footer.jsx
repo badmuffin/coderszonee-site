@@ -1,5 +1,7 @@
 import React from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { Link } from "react-router-dom";
+import { navigation } from "../constants/courseCardDetail";
 
 const Footer = () => {
   return (
@@ -19,26 +21,13 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul>
-              <li className="mb-2">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Home
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Courses
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  About Us
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-gray-400 hover:text-white">
-                  Contact
-                </a>
-              </li>
+              {navigation.map((nav) => (
+                <li className="mb-2">
+                  <Link to={nav.path} className="text-gray-400 hover:text-white">
+                    {nav.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
