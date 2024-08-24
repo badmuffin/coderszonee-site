@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({ courseBanner, courseTitle, author }) => {
   return (
@@ -40,12 +41,12 @@ const CourseCard = ({ courseBanner, courseTitle, author }) => {
                 160 Enrolled
               </div>
             </div>
-            <button
+            <Link
+              to="/product"
               className="text-white bg-gradient-to-r from-pink-500 via-pink-600 to-pink-700 hover:bg-gradient-to-br shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-bold rounded-lg text-sm px-6 py-2.5 text-center m-4 max-lg:w-[70%] w-1/3"
-              type="button"
             >
               Enroll Now
-            </button>
+            </Link>
           </div>
         </div>
       </div>
