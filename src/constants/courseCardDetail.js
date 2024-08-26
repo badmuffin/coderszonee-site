@@ -11,7 +11,7 @@ export const courseCardDetail = [
     id: 1,
     key: "a",
     courseBanner: course1,
-    courseTitle: "Frontend Development using React",
+    courseTitle: "Frontend Development with React",
     author: "Alexa Yu",
   },
   {
@@ -25,7 +25,7 @@ export const courseCardDetail = [
     id: 3,
     key: "c",
     courseBanner: course3,
-    courseTitle: "Backend Development",
+    courseTitle: "Backend Development with Nodejs",
     author: "Mosh Sharma",
   },
 ];

@@ -1,19 +1,19 @@
 import React from "react";
 import { courseCardDetail } from "../constants/courseCardDetail";
-import CourseCard from "../components/CourseCard";
 import { Link } from "react-router-dom";
+import CardCourse from "../components/CardCourse";
 
 const PopularCourse = () => {
   return (
     <section className=" px-20 pt-6 pb-10 max-sm:p-2">
       <h1
-        className="font-extrabold text-6xl text-center pt-20 max-sm:text-3xl max-sm:p-2 max-md:text-6xl"
+        className="font-extrabold text-6xl text-center py-20 max-sm:text-3xl max-sm:p-2 max-md:text-5xl"
       >
         Popular <span className="text-orange-600"> Courses </span>
       </h1>
-      <div className="flex justify-center items-center flex-wrap gap-2 max-lg:flex-col ">
+      <div className=" grid gap-4 xl:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {courseCardDetail.map((detail) => (
-          <CourseCard
+          <CardCourse 
             id={detail.id}
             key={detail.key}
             courseBanner={detail.courseBanner}

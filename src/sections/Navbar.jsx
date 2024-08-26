@@ -90,7 +90,7 @@ const Navbar = () => {
                 return (
                   <li
                     key={idx}
-                    className="text-gray-700 font-extrabold text-lg hover:text-black"
+                    className="text-gray-700 font-extrabold text-sm lg:text-lg hover:text-black"
                   >
                     <NavLink
                       to={item.path}
