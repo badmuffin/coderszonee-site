@@ -85,12 +85,12 @@ const Navbar = () => {
               state ? "block" : "hidden"
             } `}
           >
-            <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+            <ul className="flex-1  justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li
                     key={idx}
-                    className="text-gray-700 font-extrabold text-sm lg:text-lg hover:text-black"
+                    className="text-gray-700 font-bold text-sm lg:text-lg hover:text-black"
                   >
                     <NavLink
                       to={item.path}
