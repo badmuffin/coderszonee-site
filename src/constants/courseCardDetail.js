@@ -116,3 +116,86 @@ export const faqsList = [
     a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
   },
 ];
+
+// Course Detail - syllabus
+export const syllabus = [
+  {
+    title: "Week 1: Introduction to Web Development",
+    child1: "1. Overview of Frontend Development",
+    child2:
+      "2. Tools and Setup: IDEs, Version Control (Git & GitHub), Browser DevTools",
+    child3: "3. Introduction to HTML",
+    child4: "4. Basic structure of a webpage",
+    child5: "5. Common HTML elements and attributes",
+  },
+  {
+    title: "Week 2: Advanced HTML",
+    child1: "1. Semantic HTML",
+    child2: "2. Forms and Input Elements",
+    child3: "3. Introduction to HTML5 features (audio, video, canvas)",
+  },
+  {
+    title: "Week 3: Introduction to CSS",
+    child1: "1. CSS Syntax and Selectors",
+    child2: "2. Colors, Fonts, and Text Styling",
+    child3: "3. Box Model and Layout Basics (margin, padding, border)",
+  },
+  {
+    title: "Week 4: Advanced CSS",
+    child1: "1. CSS Positioning (static, relative, absolute, fixed)",
+    child2: "2. Flexbox Layout",
+    child3: "3. Grid Layout",
+    child4: "4. Responsive Web Design Basics",
+  },
+  {
+    title: "Week 5: Introduction to JavaScript",
+    child1: "1. JavaScript Basics: Variables, Data Types, Operators",
+    child2: "2. Functions and Control Structures (loops, conditions)",
+    child3: "3. DOM Manipulation: Selecting and modifying elements",
+  },
+  {
+    title: "Week 6: JavaScript Events",
+    child1: "1. Event Handling and Listeners",
+    child2: "2. Form Validation with JavaScript",
+    child3: "3. JavaScript Best Practices",
+  },
+  {
+    title: "Week 7: Advanced JavaScript",
+    child1: "1. Arrays and Objects",
+    child2: "2. ES6 Features (Arrow Functions, Template Literals, Destructuring)",
+    child3: "3. Introduction to JavaScript Modules",
+  },
+  {
+    title: "Week 8: Building Dynamic Web Pages",
+    child1: "1. Working with the Fetch API for HTTP Requests",
+    child2: "2. Introduction to JSON and working with APIs",
+    child3: "3. Basic project: Create a dynamic website with HTML, CSS, and JavaScript",
+  },
+  {
+    title: "Week 9: Introduction to Frontend Frameworks",
+    child1: "1. Introduction to React.js (or an alternative like Angular/Vue.js)",
+    child2: "2. Understanding Components and JSX",
+    child3: "3. State Management in React",
+    child4: "4. Props and Component Lifecycle",
+  },
+  {
+    title: "Week 10: Building with Frontend Frameworks",
+    child1: "1. Handling Events and Forms in React",
+    child2: "2. Working with APIs and Asynchronous Data",
+    child3: "3. Introduction to Routing in Single Page Applications (React Router)",
+  },
+  {
+    title: "Week 11: Project Development",
+    child1: "1. Plan and design a frontend project",
+    child2: "2. Build and integrate components",
+    child3: "3. Implement dynamic functionality with JavaScript and React",
+    child4: "4. Ensure responsiveness and cross-browser compatibility",
+  },
+  {
+    title: "Week 12: Review & Final Project",
+    child1: "1. Code Review and Debugging",
+    child2: "2. Best Practices in Frontend Development",
+    child3: "3. Final Project Presentation",
+    child4: "4. Course Wrap-Up and Future Learning Pathways",
+  },
+];

@@ -13,7 +13,7 @@ const ContactUs = () => {
             We'd love to hear from you! Please fill out the form below.
           </p>
         </div>
-        <div className="mt-12 mx-auto px-4 p-8 bg-white  sm:max-w-lg sm:px-8 sm:rounded-xl">
+        <div className="mt-12 mx-auto px-4 p-8 bg-white sm:max-w-xl md:max-w-3xl lg:max-w-4xl sm:px-8 sm:rounded-xl">
           <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
             <div>
               <label className="font-medium">Full name</label>

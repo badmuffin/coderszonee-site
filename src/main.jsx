@@ -13,8 +13,9 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Sign from "./pages/Sign";
 import NotFound from "./sections/NotFound";
-import Product from "./pages/Product";
 import Courses from "./pages/Courses";
+import CourseDetailPage from "./pages/CourseDetail";
+import Checkout from "./pages/Checkout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,8 +25,9 @@ const router = createBrowserRouter(
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/sign" element={<Sign />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/detail" element={<CourseDetailPage />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Route>
       <Route path="/*" element={<NotFound />} />
     </>

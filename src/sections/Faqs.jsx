@@ -5,7 +5,7 @@ const FaqsCard = (props) => {
   const answerElRef = useRef();
   const [state, setState] = useState(false);
   const [answerH, setAnswerH] = useState("0px");
-  const { faqsList, idx } = props;
+  const { faqsList, idx } = props; //destructor
 
   const handleOpenAnswer = () => {
     const answerElH = answerElRef.current.childNodes[0].offsetHeight; // get the current height 

@@ -72,20 +72,19 @@ const Navbar = () => {
         <Brand />
       </div>
       <nav
-        className={`p-5 md:text-sm ${
-          state
+        className={`p-5 md:text-sm ${ state
             ? "fixed z-10 top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
             : ""
         }`}
       >
-        <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+        <div className="gap-x-1 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
           <Brand />
           <div
             className={`flex-1 items-center mt-8 md:mt-0 md:flex ${
               state ? "block" : "hidden"
             } `}
           >
-            <ul className="flex-1  justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+            <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
               {navigation.map((item, idx) => {
                 return (
                   <li
@@ -104,6 +103,8 @@ const Navbar = () => {
                 );
               })}
             </ul>
+            
+            {/* sign in button */}
             <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
               <NavLink
                 to="/sign"
