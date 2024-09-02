@@ -1,95 +1,95 @@
 import React from "react";
-import image from "../assets/course2.png";
+import course2 from "../assets/course2.png";
 
-const Product = () => {
+const CourseDetailPage = () => {
   return (
-    <div className="p-10 mx-20 max-md:m-0">
-      {/* main heading */}
-      <section className="p-2 mb-10  flex w-full shadow-md hover:shadow-lg border max-md:flex-col">
-        <img src={image} className="w-1/3 object-cover max-md:w-full" />
-        <div className="p-4 flex flex-col justify-between w-2/3 max-md:w-full">
-          <h1 className="text-4xl p-2 font-bold">Frontend Development Bootcamp</h1>
-          <p className="text-lg p-2">
-            <span className="font-bold underline">Objective</span>: Equip
-            students with the skills to build responsive and dynamic web
-            interfaces using modern frontend technologies
-          </p>
-          <p className="text-lg p-2">
-            <span className="font-bold underline">Duration</span>: 3 Months
-          </p>
-          <p className="text-lg p-2">
-            <span className="font-bold underline">Level</span>: Beginner to
-            Intermediate
-          </p>
-          <p className="text-lg p-2">
-            created by
-            <span className="text-orange-600 font-bold"> Alexa Yu</span>
+    <div className="flex flex-col lg:flex-row lg:justify-between p-6 lg:p-12 bg-white">
+      {/* Main Content */}
+      <div className="lg:w-2/3">
+        <h1 className="text-3xl lg:text-5xl font-bold text-black mb-4">
+          The Frontend Development Bootcamp with React 2024
+        </h1>
+        <p className="text-lg text-gray-600 mb-2">
+          Created by{" "}
+          <span className="font-semibold text-black">Tom Holland</span>
+        </p>
+        <p className="text-gray-500 mb-8">
+          Last updated: August 2024 · Language: Hindi
+        </p>
+
+        {/* Course Description */}
+        <div className="mb-8">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+            Course Description
+          </h2>
+          <p className="text-gray-700 mb-4">
+            This course is designed to take you from a beginner to an advanced
+            level in React, one of the most popular JavaScript libraries for
+            building user interfaces. Learn how to build dynamic web
+            applications, manage state effectively, and leverage React's
+            ecosystem to become a proficient developer.
           </p>
         </div>
-      </section>
 
-      {/* what you'll learn */}
-      <section className="p-2 my-10 w-full border shadow-md hover:shadow-lg">
-        <h1 className="text-4xl p-4 font-bold">What you'll learn</h1>
-        <div className="grid grid-cols-2 max-md:grid-cols-1">
-          <p className="text-lg p-2">The ins and outs of HTML5, CSS3 and Modern JavaScript</p>
-          <p className="text-lg p-2">Create responsive, accessible, and beautiful layouts</p>
-          <p className="text-lg p-2">Learn to create Dynamic Webpages with APIs</p>
-          <p className="text-lg p-2">Introduced to Popular Frontend library</p>
-          <p className="text-lg p-2">Make real world application using Reactjs</p>
-          <p className="text-lg p-2">Host your projects to share your work online</p>
+        {/* What you'll learn */}
+        <div className="mb-8">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+            What you'll learn
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Build modern web applications using React</li>
+            <li>Understand component-based architecture</li>
+            <li>Manage state with React hooks and Redux</li>
+            <li>Deploy applications with modern tools and workflows</li>
+          </ul>
         </div>
-      </section>
 
-      <section className="p-2 my-10 w-full border shadow-md hover:shadow-lg" >
-        <h1 className="text-4xl p-4 font-bold">Curiculum</h1>
-        <div className="flex flex-col justify-between p-2">
-          <div className="p-2">
-            <p className="text-lg font-bold">Month 1: HTML & CSS Foundations</p>
-            <p className="text-base">Week 1: Introduction to Web Development</p>
-            <p className="text-base">Week 2: Advanced HTML</p>
-            <p className="text-base">Week 3: Introduction to CSS</p>
-            <p className="text-base">Week 4: Advanced CSS</p>
-          </div>
-          <div className="p-2">
-            <p className="text-lg font-bold">Month 2: JavaScript & Interactive Web Design</p>
-            <p className="text-base">Week 5: Introduction to JavaScript</p>
-            <p className="text-base">Week 6: JavaScript Events</p>
-            <p className="text-base">Week 7: Advanced JavaScript</p>
-            <p className="text-base">Week 8: Building Dynamic Web Pages</p>
-          </div>
-          <div className="p-2">
-            <p className="text-lg font-bold">Month 3: Advanced Frontend Development & Project</p>
-            <p className="text-sm">Week 9: Introduction to Frontend Frameworks</p>
-            <p className="text-sm">Week 10: Building with Frontend Frameworks</p>
-            <p className="text-sm">Week 11: Project Development</p>
-            <p className="text-sm">Week 12: Review & Final Project</p>
-          </div>
+        {/* Requirements */}
+        <div className="mb-8">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-black mb-4">
+            Requirements
+          </h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>Basic understanding of HTML, CSS, and JavaScript</li>
+            <li>A computer with internet access</li>
+          </ul>
         </div>
-      </section>
+      </div>
 
-      {/* requirements */}
-      <section className="p-2 my-10 w-full border shadow-md hover:shadow-lg">
-        <h1 className="text-4xl p-4 font-bold">Requirements</h1>
-        <ul className="p-4 text-lg">
-          <li className="p-2">1. A Decent Computer with Internet</li>
-          <li className="p-2">2. A Strong will to learn new things</li>
-          <li className="p-2">
-            3. Be ready to learn an insane amount of awesome stuffs
-          </li>
-          <li className="p-2">4. Prepare to build real world apps!</li>
-        </ul>
-      </section>
+      {/* Sidebar */}
+      <div className="lg:w-1/3 lg:ml-10 mt-8 lg:mt-0 lg:sticky lg:top-40 lg:self-start">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
+          <img
+            src={course2}
+            alt="Course Cover"
+            className="w-full mb-4 rounded-lg"
+          />
+          <div className="flex items-center justify-between mb-4">
+            <span className="text-3xl font-bold text-orange-500">$49.99</span>
+            <span className="line-through text-gray-500">$99.99</span>
+          </div>
+          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg transition duration-200">
+            Enroll Now
+          </button>
+          <p className="text-gray-600 text-center mt-4">
+            30-Day Money-Back Guarantee
+          </p>
+        </div>
 
-      {/* Description */}
-      <section className="p-2 my-10 w-full border shadow-md hover:shadow-lg">
-      <h1 className="text-4xl p-4 font-bold">Descriptions</h1>
-        <p className="text-bold text-base p-2">Now with over 10+ hours of new content. Just updated on 12 Feb 20XX</p>
-        <p className="text-base p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptate nulla repellendus iusto fuga cum ipsum labore vero autem consequuntur deleniti minus sequi reprehenderit, a placeat. Velit minus consectetur quaerat at animi nemo, illum vel iusto rem ab ullam totam.</p>
-        <p className="text-base p-2">Hii, welcom to this frontend development Bootcamp, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut ducimus illo sint blanditiis tenetur perferendis, ex est, impedit quibusdam rerum perspiciatis qui placeat voluptatibus veritatis earum culpa dicta facilis voluptas nulla nemo. Voluptate modi ad, dolor adipisci aspernatur ullam accusamus et voluptatum quis. Consequuntur, est voluptatem. Dolorum, numquam autem.</p>
-      </section>
+        {/* Course includes */}
+        <div className="bg-white p-6 rounded-lg shadow-md mt-6">
+          <h3 className="text-lg font-semibold mb-4">This course includes:</h3>
+          <ul className="list-none text-gray-700 space-y-2">
+            <li>15 hours of video content</li>
+            <li>10 downloadable resources</li>
+            <li>Full lifetime access</li>
+            <li>Access on mobile and TV</li>
+            <li>Certificate of completion</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Product;
+export default CourseDetailPage;

@@ -9,7 +9,7 @@ import Hero from "../sections/Hero";
 
 const Home = () => {
   return (
-    <main className="scroll-smooth ">
+    <main>
       <Hero />
       <WhyUs />
       <PopularCourse />

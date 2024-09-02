@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-black.png";
 import { Link, NavLink } from "react-router-dom";
 import { navigation } from "../constants/courseCardDetail";
 // import { HashLink as Link } from "react-router-hash-link";
@@ -66,13 +66,13 @@ const Navbar = () => {
   );
 
   return (
-    <header className="z-50">
+    <header className="z-50 bg-gray-50 border shadow-md sticky top-0 ">
       {/* another navbar which opens only when the burger icon get clicked */}
-      <div className={` z-50 md:hidden ${state ? "mx-2 pb-5" : "hidden"}`}>
+      <div className={` z-50 md:hidden ${state ? "mx-2 pb-10" : "hidden"}`}>
         <Brand />
       </div>
       <nav
-        className={`pb-5 md:text-sm ${
+        className={`p-5 md:text-sm ${
           state
             ? "fixed z-10 top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
             : ""

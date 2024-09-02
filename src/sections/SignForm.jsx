@@ -10,7 +10,7 @@ const SignForm = () => {
 
   return (
     <div className="flex flex-wrap">
-      <div className="flex w-full flex-col md:w-1/2 bg-blue-100">
+      <div className="flex w-full flex-col md:w-1/2 bg-gray-100">
         <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
           <p className="text-left text-5xl font-bold">
             {" "}

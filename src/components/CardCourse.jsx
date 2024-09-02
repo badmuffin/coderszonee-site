@@ -9,7 +9,7 @@ const CardCourse = ({ courseBanner, courseTitle, author }) => {
         <img
           src={courseBanner}
           alt="course image"
-          className="w-full h-full object-cover rounded-t-3xl hover:scale-105"
+          className="w-full h-full object-cover rounded-t-3xl hover:scale-105 transition"
         />
       </div>
       {/* content */}
