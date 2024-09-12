@@ -1,14 +1,17 @@
-import React from 'react'
-import ContactUs from '../sections/ContactUs'
-import Faqs from '../sections/Faqs'
+import React, { useEffect } from "react";
+import ContactUs from "../sections/ContactUs";
+import Faqs from "../sections/Faqs";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-        <ContactUs />
-        <Faqs />
+      <ContactUs />
+      <Faqs />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

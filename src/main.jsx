@@ -16,6 +16,7 @@ import NotFound from "./sections/NotFound";
 import Courses from "./pages/Courses";
 import CourseDetailPage from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
+import HackathonForm from "./sections/HackathonForm";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
         <Route path="/detail" element={<CourseDetailPage />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/hack" element={<HackathonForm />} />
       </Route>
       <Route path="/*" element={<NotFound />} />
     </>

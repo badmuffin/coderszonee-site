@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const CheckoutPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <section className="relative py-28 bg-gray-900">
       <div className="relative max-w-screen-xl mx-auto text-gray-600 sm:px-4 md:px-8">

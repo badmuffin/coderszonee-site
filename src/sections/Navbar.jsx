@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import logo from "../assets/logo-black.png";
 import { Link, NavLink } from "react-router-dom";
 import { navigation } from "../constants/courseCardDetail";
+import Banner from "../sections/Banner";
 // import { HashLink as Link } from "react-router-hash-link";
 
 const Navbar = () => {
@@ -66,13 +67,15 @@ const Navbar = () => {
   );
 
   return (
-    <header className="z-50 bg-gray-50 border shadow-md sticky top-0 ">
+    <header className="z-50 bg-gray-50 border shadow-md sticky top-0">
+      <Banner />
       {/* another navbar which opens only when the burger icon get clicked */}
       <div className={` z-50 md:hidden ${state ? "mx-2 pb-10" : "hidden"}`}>
         <Brand />
       </div>
       <nav
-        className={`p-5 md:text-sm ${ state
+        className={`p-5 md:text-sm ${
+          state
             ? "fixed z-10 top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
             : ""
         }`}
@@ -103,7 +106,7 @@ const Navbar = () => {
                 );
               })}
             </ul>
-            
+
             {/* sign in button */}
             <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
               <NavLink
@@ -111,6 +114,14 @@ const Navbar = () => {
                 className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"
               >
                 Sign in
+              </NavLink>
+            </div>
+            <div className="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
+              <NavLink
+                to="/sign"
+                className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"
+              >
+                Register
               </NavLink>
             </div>
           </div>

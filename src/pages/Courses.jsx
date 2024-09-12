@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { courseCardDetail } from "../constants/courseCardDetail";
 import CardCourse from "../components/CardCourse";
 
 const Courses = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className=" w-full p-20 max-sm:p-2 ">
       <div className="pb-10">
-        <h1 className="font-extrabold text-5xl text-left pb-6 max-sm:text-3xl max-sm:p-2 max-md:text-4xl">Category</h1>
+        <h1 className="font-extrabold text-5xl text-left pb-6 max-sm:text-3xl max-sm:p-2 max-md:text-4xl">
+          Category
+        </h1>
         {/* search box */}
         <div className="flex justify-between items-center w-1/2 lg:w-1/3 border-2 border-black rounded-3xl">
-          <input className="p-4 rounded-3xl outline-none flex-1" type="text" placeholder="Search Course" />
-          <i className="fa-solid fa-magnifying-glass p-4" onClick={() => alert("search")}></i>
+          <input
+            className="p-4 rounded-3xl outline-none flex-1"
+            type="text"
+            placeholder="Search Course"
+          />
+          <i
+            className="fa-solid fa-magnifying-glass p-4"
+            onClick={() => alert("search")}
+          ></i>
         </div>
       </div>
       <div>

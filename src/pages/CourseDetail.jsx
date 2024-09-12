@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import course2 from "../assets/course2.png";
 import { syllabus } from "../constants/courseCardDetail";
 import { Link } from "react-router-dom";
@@ -10,6 +10,10 @@ const CourseDetailPage = () => {
     // if clicked section is already opened then close and vice-versa
     setOpenSection(openSection === title ? null : title);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="flex flex-col-reverse lg:flex-row lg:justify-between p-6 lg:p-12 bg-white">
@@ -69,7 +73,7 @@ const CourseDetailPage = () => {
               </h3>
               <div
                 className={`font-normal p-1 text-gray-800 overflow-hidden 
-                  ${openSection === data.title ? "h-auto": "h-0"} 
+                  ${openSection === data.title ? "h-auto" : "h-0"} 
                 `}
               >
                 <p>{data.child1}</p>
@@ -109,7 +113,10 @@ const CourseDetailPage = () => {
             <span className="line-through text-gray-800">$99.99</span>
           </div>
 
-          <Link to="/checkout" className="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold rounded-lg text-base px-10 py-4 text-center mr-2 mb-2 w-full flex justify-center items-center">
+          <Link
+            to="/checkout"
+            className="text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-bold rounded-lg text-base px-10 py-4 text-center mr-2 mb-2 w-full flex justify-center items-center"
+          >
             Enroll Now
           </Link>
           <p className="text-gray-800 text-center mt-6">

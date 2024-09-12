@@ -3,10 +3,37 @@ import ed from "../assets/ed.png";
 
 const SignForm = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
+  const [email, setEmail] = useState(''); //here
+  const [password, setPassword] = useState(''); //here
+  const [name, setName] = useState(''); //here
 
   const toggleForm = () => {
     setIsSignInForm(!isSignInForm);
   };
+
+  const handleSubmit = async (e) => { //here
+    e.preventDefault();
+    const url = isSignInForm ? '/api/auth/login' : 'api/auth/register';
+    const requestBody = isSignInForm 
+      ? {email, password}
+      : {name, email, password};
+
+    try {
+      const response = await fetch(`http:/localhost:5173${url}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+
+  }
 
   return (
     <div className="flex flex-wrap">
@@ -42,6 +69,8 @@ const SignForm = () => {
                 <input
                   type="text"
                   id="name"
+                  value={name} //here
+                  onChange={(e) => setName(e.target.value)} //here
                   className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   placeholder="Full Name"
                 />
@@ -53,6 +82,8 @@ const SignForm = () => {
                 <input
                   type="email"
                   id="email"
+                  value={email} //here
+                  onChange={(e) => setEmail(e.target.value)} //here
                   className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   placeholder="Email"
                 />
@@ -63,13 +94,14 @@ const SignForm = () => {
                 <input
                   type="password"
                   id="password"
+                  value={password} //here
+                  onChange={(e) => setPassword(e.target.value)} //here
                   className="w-full flex-1 appearance-none border-gray-300 bg-white px-4 py-2 text-base text-gray-700 placeholder-gray-400 focus:outline-none"
                   placeholder="Password"
                 />
               </div>
             </div>
             <button
-              onClick=""
               className="text-white bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 hover:bg-gradient-to-br shadow-lg shadow-gray-600/60 dark:shadow-lg dark:shadow-gray-900/90 font-bold rounded-lg text-sm px-6 py-2.5 text-center mr-2 mb-2"
             >
               {isSignInForm ? "Sign in" : "Sign up"}

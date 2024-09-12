@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import img from "../assets/profile1.png";
 
 const Profile = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className=" bg-red-400 p-2 lg:px-40 lg:py-10 w-full">
-      <h1 className="p-10 text-center text-5xl max-sm:text-4xl font-bold">My Profile</h1>
+      <h1 className="p-10 text-center text-5xl max-sm:text-4xl font-bold">
+        My Profile
+      </h1>
       {/* image, name, professions */}
       <div className="flex justify-start items-center rounded-2xl mx-10 bg-white shadow-xl max-sm:mx-1 max-sm:my-2">
         <img
@@ -15,7 +20,9 @@ const Profile = () => {
         />
         <div className="p-2 text-left">
           <p className="pt-2 font-bold text-3xl max-md:text-2xl">Tom Holland</p>
-          <p className="pb-2 font-semibold text-xl max-md:text-lg">Web Engineer</p>
+          <p className="pb-2 font-semibold text-xl max-md:text-lg">
+            Web Engineer
+          </p>
         </div>
       </div>
       {/* personal information */}
