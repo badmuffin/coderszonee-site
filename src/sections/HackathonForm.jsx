@@ -41,7 +41,7 @@ const HackathonForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/submit-form",
+        "http://localhost:3000/submit-form",
         formData
       );
       alert(response.data);
