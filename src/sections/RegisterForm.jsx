@@ -24,7 +24,8 @@ const RegisterForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/signup", user);
+      // PORT is same as login-register-backend
+      const response = await axios.post("http://localhost:2000/api/signup", user);
 
       console.log("User registered successfully:", response.data);
 

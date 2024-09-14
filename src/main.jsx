@@ -19,6 +19,8 @@ import HackathonForm from "./sections/HackathonForm";
 import Profile from "./pages/Profile";
 import LoginForm from "./sections/LoginForm";
 import RegisterForm from "./sections/RegisterForm";
+import { Protected } from "./sections/ProtectedRoutes";
+import { AuthProvider } from "./sections/AuthContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,7 +35,14 @@ const router = createBrowserRouter(
         <Route path="/courses" element={<Courses />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/hack" element={<HackathonForm />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={
+            <Protected>
+              <Profile />
+            </Protected>
+          }
+        />
       </Route>
       <Route path="/*" element={<NotFound />} />
     </>
@@ -42,8 +51,10 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router}>
-      <Home />
-    </RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={router}>
+        <Home />
+      </RouterProvider>
+    </AuthProvider>
   </StrictMode>
 );

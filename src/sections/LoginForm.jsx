@@ -3,36 +3,38 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import ed from "../assets/ed.png";
 import { Link } from "react-router-dom";
-
-// import { useAuth } from './AuthContext'; // Import useAuth
+import { useAuth } from './AuthContext'; // Import useAuth
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  // const { login } = useAuth(); // Access login function from AuthContext
+  const { login } = useAuth(); // Access login function from AuthContext
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/signin", {
+      const response = await axios.post("http://localhost:2000/api/signin", {
         email,
         password,
       });
 
       console.log("User logged in successfully:", response.data);
 
-      // Extract data from response
+      // Extract token and user from response data
       const { token, user } = response.data;
 
       // Set user information using AuthContext
       login({ token, ...user });
 
-      // Show success message and redirect
-      navigate("/profile");
+      // Show success alert and redirect to profile
       alert("Successfully logged in!");
+      navigate("/profile"); // Redirect after login
     } catch (err) {
-      console.error("Error logging in:", err.response?.data?.msg || err.message);
+      // Show error alert if login fails
+      const errorMsg = err.response?.data?.msg || err.message;
+      console.error("Error logging in:", errorMsg);
+      alert(`Login failed: ${errorMsg}`); // Display the error message in an alert
     }
   };
 
@@ -40,7 +42,9 @@ const LoginForm = () => {
     <div className="flex w-full  bg-blue-100">
       <div className="lg:w-[28rem] mx-auto my-auto flex flex-col justify-center pt-8 md:justify-start md:px-6 md:pt-0">
         <p className="text-left text-5xl font-bold">Welcome back!</p>
-        <p className="mt-2 text-left text-gray-500">Please enter your details.</p>
+        <p className="mt-2 text-left text-gray-500">
+          Please enter your details.
+        </p>
         <button className="-2 mt-8 flex items-center justify-center rounded-md border px-4 py-1 outline-none ring-gray-400 ring-offset-2 transition focus:ring-2 hover:border-transparent hover:bg-black hover:text-white">
           <img
             className="mr-2 h-5"

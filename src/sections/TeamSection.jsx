@@ -17,7 +17,7 @@ const TeamSection = () => {
           </p>
         </div>
         <div className="mt-12">
-          <ul className="grid gap-8 lg:grid-cols-2">
+          <ul className="grid gap-8 lg:grid-cols-3">
             {team.map((item, idx) => (
               <li key={idx} className="gap-8 sm:flex border rounded-xl shadow-sm hover:shadow-lg duration-200">
                 <div className="w-full h-60">
@@ -28,7 +28,7 @@ const TeamSection = () => {
                   />
                 </div>
                 <div className="mt-4 max-sm:mt-0">
-                  <h4 className="p-2 text-xl text-gray-700 font-semibold">
+                  <h4 className="p-2 pl-0 text-xl text-gray-700 font-semibold">
                     {item.name}
                   </h4>
                   <p className="text-indigo-600">{item.title}</p>
