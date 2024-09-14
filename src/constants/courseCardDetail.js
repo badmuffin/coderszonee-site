@@ -199,3 +199,47 @@ export const syllabus = [
     child4: "4. Course Wrap-Up and Future Learning Pathways",
   },
 ];
+
+// team member - about page
+export const team = [
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1579017331263-ef82f0bbc748?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
+    name: "Martiana Dialan",
+    title: "Product Designer",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+    linkedin: "javascript:void(0)",
+    twitter: "javascript:void(0)",
+    github: "javascript:void(0)",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1623605931891-d5b95ee98459?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&q=80",
+    name: "Michael Colorand",
+    title: "Software Engineer",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+    linkedin: "javascript:void(0)",
+    twitter: "javascript:void(0)",
+    github: "javascript:void(0)",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    name: "Daniel Martin",
+    title: "Graphic Designer",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+    linkedin: "javascript:void(0)",
+    twitter: "javascript:void(0)",
+    github: "javascript:void(0)",
+  },
+  {
+    avatar:
+      "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
+    name: "Vicky Tanson",
+    title: "Frontend Expert",
+    desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.",
+    linkedin: "javascript:void(0)",
+    twitter: "javascript:void(0)",
+    github: "javascript:void(0)",
+  },
+];

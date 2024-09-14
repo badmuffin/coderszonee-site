@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AboutUs from "../sections/AboutUs";
 import Faqs from "../sections/Faqs";
+import TeamSection from "../sections/TeamSection";
 
 const About = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const About = () => {
   return (
     <>
       <AboutUs />
+      <TeamSection />
       <Faqs />
     </>
   );
