@@ -1,10 +1,5 @@
 ## Edtech website for Coderszonee
 
-To run the site :- `npm run dev`
+CodersZonee is an edtech platform designed to facilitate learning and course management. Built using React and TailwindCSS for the frontend, and Node.js with Express for the backend (still in progress), the platform features multiple pages including Home, About, Contact, and Courses, with a Resources page under development. 
 
-## File Structure
-In src folder :-
-1. assets folder - includes all the assets required for the project
-2. components - It includes various components like product card, searchbar and similar stuffs
-3. pages - It contains the pages like HomePage, courses page, etc
-4. section - it contains sections like hero section, navbar, footer, header, most popular courses, etc
+It includes forms for user interaction and an admin panel to manage student and teacher data, with future capabilities to add and delete courses. The project integrates React Router for seamless navigation, react-multi-carousel for creating carousels, uses FontAwesome for icons and other libraries.
