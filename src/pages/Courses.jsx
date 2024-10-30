@@ -13,7 +13,7 @@ const Courses = () => {
           Category
         </h1>
         {/* search box */}
-        <div className="flex justify-between items-center w-1/2 lg:w-1/3 border-2 border-black rounded-3xl">
+        <div className="flex justify-between items-center w-full md:w-1/2 border-2 border-black rounded-3xl">
           <input
             className="p-4 rounded-3xl outline-none flex-1"
             type="text"

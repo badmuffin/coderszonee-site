@@ -16,7 +16,7 @@ const Navbar = () => {
   }, []);
 
   const Brand = () => (
-    <div className="flex items-center justify-between py-5 md:block">
+    <div className="flex items-center justify-between py-1 md:block">
       <Link to="/">
         <img
           className=" object-cover"
@@ -74,7 +74,7 @@ const Navbar = () => {
         <Brand />
       </div>
       <nav
-        className={`p-5 md:text-sm ${
+        className={`p-4 md:text-sm ${
           state
             ? "fixed z-10 top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent"
             : ""
